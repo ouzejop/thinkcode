@@ -48,6 +48,7 @@ function requireTs(filePath) {
     exports: moduleObj.exports,
     require: localRequire,
     console,
+    process,
     Buffer,
     setTimeout,
     clearTimeout,

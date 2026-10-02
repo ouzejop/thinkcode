@@ -129,7 +129,8 @@ export const mockApi: Api = {
 
     // Cooldown check (prevent spamming help within 500ms, disabled in tests)
     const now = Date.now();
-    if (process.env.NODE_ENV !== 'test' && now - session.lastHelpTime < 500 && session.highest > 0) {
+    const isTest = (globalThis as any)?.process?.env?.NODE_ENV === 'test';
+    if (!isTest && now - session.lastHelpTime < 500 && session.highest > 0) {
       throw new ApiError('COOLDOWN', 'Please take a moment to reflect before asking again.', 2000);
     }
     session.lastHelpTime = now;

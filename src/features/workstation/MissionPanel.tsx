@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { Exercise, TestResult } from '../../api/types';
 import { sfx } from '../../lib/sfx';
 import { useProfileStore } from '../../stores/profileStore';
-import { IconBug, IconExample, IconStar, IconThink, IconTrophy, Led, type LedState, Panel, PixelSprite } from '../../ui';
+import { IconBug, IconExample, IconStar, IconThink, IconTrophy, Led, type LedState, Panel } from '../../ui';
 import { ExerciseLeaderboard } from './ExerciseLeaderboard';
 
 interface MissionPanelProps {

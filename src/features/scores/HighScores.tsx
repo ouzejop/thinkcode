@@ -39,7 +39,7 @@ export const HighScores: React.FC = () => {
         const api = await getApi();
         const list = await api.getExercises(courseId);
         setExercises(list);
-        if (list.length > 0 && !searchParams.get('exerciseId')) {
+        if (list.length > 0 && list[0] && !searchParams.get('exerciseId')) {
           setSelectedExerciseId(list[0].id);
         }
       } catch (err) {

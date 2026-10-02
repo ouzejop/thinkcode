@@ -5,12 +5,12 @@ import coachRoutes from './routes/coach.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const CORS_ORIGIN = process.env.CORS_ORIGIN || 'http://localhost:5173';
+const CORS_ORIGIN = process.env.CORS_ORIGIN;
 
 // ── Middleware ──────────────────────────────────────────────────────
 app.use(
   cors({
-    origin: CORS_ORIGIN,
+    origin: CORS_ORIGIN ? CORS_ORIGIN.split(',').map((s) => s.trim()) : true,
     methods: ['GET', 'POST', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   }),
@@ -39,11 +39,15 @@ app.use((err, _req, res, _next) => {
 });
 
 // ── Start ──────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n  ┌──────────────────────────────────────┐`);
-  console.log(`  │  ThinkCode Server                     │`);
-  console.log(`  │  http://localhost:${PORT}               │`);
-  console.log(`  │  CORS: ${CORS_ORIGIN}     │`);
-  console.log(`  │  AI: ${process.env.OPENROUTER_API_KEY ? '✓ OpenRouter' : '✗ no key'}            │`);
-  console.log(`  └──────────────────────────────────────┘\n`);
-});
+if (!process.env.VERCEL) {
+  app.listen(PORT, () => {
+    console.log(`\n  ┌──────────────────────────────────────┐`);
+    console.log(`  │  ThinkCode Server                     │`);
+    console.log(`  │  http://localhost:${PORT}               │`);
+    console.log(`  │  CORS: ${CORS_ORIGIN || 'all (same-origin/reflected)'}     │`);
+    console.log(`  │  AI: ${process.env.OPENROUTER_API_KEY ? '✓ OpenRouter' : '✗ no key'}            │`);
+    console.log(`  └──────────────────────────────────────┘\n`);
+  });
+}
+
+export default app;

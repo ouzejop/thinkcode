@@ -211,7 +211,8 @@ export const LadderPanel: React.FC<LadderPanelProps> = ({ onAskHelp, className =
     const sendToBackend = async () => {
       setIsTyping(true);
       try {
-        const res = await fetch('/api/chat', {
+        const apiBase = import.meta.env.VITE_API_URL ?? '/api';
+        const res = await fetch(`${apiBase}/chat`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

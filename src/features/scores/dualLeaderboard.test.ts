@@ -20,8 +20,8 @@ describe('Dual Leaderboard System (Language + Exercise)', () => {
     expect(cpus.some((c) => c.initials === 'NEO')).toBe(true);
 
     // Verify ordering: Rank 1 has high XP and few rungs
-    expect(list[0].rank).toBe(1);
-    expect(list[0].xpEarned).toBeGreaterThanOrEqual(list[1].xpEarned);
+    expect(list[0]?.rank).toBe(1);
+    expect(list[0]?.xpEarned).toBeGreaterThanOrEqual(list[1]?.xpEarned ?? 0);
   });
 
   it('records real player completion and places them accurately on the exercise leaderboard', () => {

@@ -177,12 +177,10 @@ export const useLeaderboardStore = create<LeaderboardStoreState>()(
       },
 
       getCourseLeaderboard: (params) => {
-        const state = get();
         const profile = useProfileStore.getState();
         const auth = useAuthStore.getState();
 
         const activePlayerId = params.playerId || profile.playerId;
-        const courseFilter = params.courseId || 'javascript';
         const tab = params.tab || 'xp';
 
         // Base CPU participants
