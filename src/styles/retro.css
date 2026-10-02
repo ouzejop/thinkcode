@@ -1,0 +1,101 @@
+/* Retro style = variables only. Components read them; they never branch on the level. */
+[data-retro='clean'] {
+  --radius: 10px;
+  --border-w: 1px;
+  --shadow-hard: none;
+  --shadow-press: none;
+  --border-soft: var(--bs-clean);
+  --btn-edge: transparent;
+  --font-label: var(--font-ui);
+  --label-size: 14px;
+  --label-case: none;
+  --label-tracking: 0;
+  --font-logo: var(--font-ui);
+  --logo-size: 18px;
+  --logo-case: none;
+  --font-rank: var(--font-ui);
+  --rank-size: 14px;
+  --font-num: var(--font-ui);
+  --num-size: 15px;
+  --font-rung: var(--font-ui);
+  --rung-size: 15px;
+  --rung-case: none;
+  --btn-case: none;
+}
+[data-retro='balanced'] {
+  --radius: 6px;
+  --border-w: 1px;
+  --shadow-hard: none;
+  --shadow-press: none;
+  --border-soft: var(--bs-balanced);
+  --btn-edge: transparent;
+  --font-label: var(--font-ui);
+  --label-size: 12px;
+  --label-case: uppercase;
+  --label-tracking: 0.08em;
+  --font-logo: var(--font-pixel);
+  --logo-size: 11px;
+  --logo-case: uppercase;
+  --font-rank: var(--font-pixel);
+  --rank-size: 12px;
+  --font-num: var(--font-ui);
+  --num-size: 15px;
+  --font-rung: var(--font-ui);
+  --rung-size: 15px;
+  --rung-case: none;
+  --btn-case: none;
+}
+[data-retro='arcade'] {
+  --radius: 0;
+  --border-w: 2px;
+  --shadow-hard: 3px 3px 0 var(--line);
+  --shadow-press: 1px 1px 0 var(--line);
+  --border-soft: var(--line);
+  --btn-edge: var(--line);
+  --font-label: var(--font-pixel);
+  --label-size: 11px;
+  --label-case: uppercase;
+  --label-tracking: 0.04em;
+  --font-logo: var(--font-pixel);
+  --logo-size: 11px;
+  --logo-case: uppercase;
+  --font-rank: var(--font-pixel);
+  --rank-size: 12px;
+  --font-num: var(--font-pixel);
+  --num-size: 11px;
+  --font-rung: var(--font-pixel);
+  --rung-size: 11px;
+  --rung-case: uppercase;
+  --btn-case: uppercase;
+}
+
+.t-label {
+  font-family: var(--font-label);
+  font-size: var(--label-size);
+  text-transform: var(--label-case);
+  letter-spacing: var(--label-tracking);
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+.t-logo {
+  font-family: var(--font-logo);
+  font-size: var(--logo-size);
+  text-transform: var(--logo-case);
+  font-weight: 700;
+}
+.t-rank {
+  font-family: var(--font-rank);
+  font-size: var(--rank-size);
+}
+.t-num {
+  font-family: var(--font-num);
+  font-size: var(--num-size);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.t-rung {
+  font-family: var(--font-rung);
+  font-size: var(--rung-size);
+  text-transform: var(--rung-case);
+  font-weight: 700;
+}

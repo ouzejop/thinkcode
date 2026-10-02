@@ -1,0 +1,53 @@
+/* WORK: readable, plain. Pixel fonts and hard shadows are neutralised by construction. */
+.zone-work {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: 16px;
+  line-height: 1.5;
+  --font-label: var(--font-ui);
+  --font-logo: var(--font-ui);
+  --font-rank: var(--font-ui);
+  --font-num: var(--font-ui);
+  --font-rung: var(--font-ui);
+  --shadow-hard: none;
+  --shadow-press: none;
+}
+[data-retro='arcade'] .zone-work {
+  --label-size: 12px;
+  --label-tracking: 0.08em;
+  --num-size: 15px;
+  --rung-size: 15px;
+  --rung-case: none;
+}
+/* ARCADE: sunken stage for ladder, shelf, scores. TOUCH: light accents anywhere. */
+.zone-arcade {
+  background: var(--surface-sunken);
+}
+
+/* Debug overlay: ?zones=1 or the styleguide toggle. */
+[data-zones] .zone-work,
+[data-zones] .zone-arcade,
+[data-zones] .zone-touch {
+  position: relative;
+  outline: 2px dashed var(--zc);
+  outline-offset: -2px;
+}
+[data-zones] .zone-work::after,
+[data-zones] .zone-arcade::after,
+[data-zones] .zone-touch::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1px 6px;
+  font: 700 11px/1.4 var(--font-ui);
+  background: var(--zc);
+  color: #fff;
+  pointer-events: none;
+}
+[data-zones] .zone-work { --zc: #1d4ed8; }
+[data-zones] .zone-work::after { content: 'WORK'; }
+[data-zones] .zone-arcade { --zc: #b45309; }
+[data-zones] .zone-arcade::after { content: 'ARCADE'; }
+[data-zones] .zone-touch { --zc: #be185d; }
+[data-zones] .zone-touch::after { content: 'TOUCH'; }

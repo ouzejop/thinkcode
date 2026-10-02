@@ -1,0 +1,38 @@
+/* Single source of truth for colours: the contrast test parses this file. */
+:root,
+[data-theme='lavender'] {
+  --bg: #efedf5;
+  --surface: #fbfafd;
+  --surface-sunken: #e4e0ef;
+  --ink: #1f1b2e;
+  --ink-soft: #4f4963;
+  --line: #3b3552;
+  --border-control: #7d74a3;
+  --primary: #5b4fc9;
+  --on-primary: #ffffff;
+  --xp: #ffd23f;
+  --on-xp: #1f1b2e;
+  --pass: #176b3f;
+  --fail: #b42318;
+  --on-status: #ffffff;
+  --bs-clean: #d2cce3;
+  --bs-balanced: #b7afd0;
+}
+[data-theme='night'] {
+  --bg: #1b1826;
+  --surface: #25213a;
+  --surface-sunken: #14111e;
+  --ink: #ece9f5;
+  --ink-soft: #b9b3cf;
+  --line: #8f87b8;
+  --border-control: #8f87b8;
+  --primary: #a79bff;
+  --on-primary: #1b1826;
+  --xp: #ffd23f;
+  --on-xp: #1f1b2e;
+  --pass: #4ade80;
+  --fail: #ff8a80;
+  --on-status: #14111e;
+  --bs-clean: #3b365a;
+  --bs-balanced: #5a5283;
+}

@@ -1,0 +1,22 @@
+import '@fontsource/atkinson-hyperlegible/400.css';
+import '@fontsource/atkinson-hyperlegible/700.css';
+import '@fontsource/jetbrains-mono/400.css';
+import '@fontsource/jetbrains-mono/700.css';
+import './styles/tokens.css';
+import './styles/themes.css';
+import './styles/retro.css';
+import './styles/index.css';
+import './styles/zones.css';
+
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './app/App';
+import { initSettings } from './stores/settingsStore';
+
+initSettings();
+
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+);
