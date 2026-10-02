@@ -14,7 +14,7 @@
 **An autonomous retro-arcade Socratic AI coding coach for beginners that refuses to give solutions away.**  
 *Teaching computational thinking through guided inquiry, adaptive hint ladders, sandboxed execution, and autonomy scoring.*
 
-[🎮 Live Demo](http://localhost:5173) • [📋 Devpost Submission](https://firstcommit.devpost.com/) • [✨ Features](#-key-features) • [⚡ Quick Start](#-quick-start-for-judges) • [🏛️ Socratic Philosophy](#-the-socratic-philosophy)
+[🎮 Live Demo](https://thinkcode-omega.vercel.app/) • [📋 Devpost Submission](https://firstcommit.devpost.com/) • [✨ Features](#-key-features) • [⚡ Quick Start](#-quick-start-for-judges) • [🏛️ Socratic Philosophy](#-the-socratic-philosophy)
 
 </div>
 
